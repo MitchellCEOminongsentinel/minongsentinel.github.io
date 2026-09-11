@@ -13,7 +13,7 @@ Choose your tier and secure your transaction instantly via NAB Osko.
 - Email support
 - Valid for 30 days
 
-**PayID:** [Your ABN]  
+**PayID:** +61 421804218  
 **Reference:** STANDARD-001
 
 ---
@@ -26,7 +26,7 @@ Choose your tier and secure your transaction instantly via NAB Osko.
 - Analytics dashboard
 - Valid for 90 days
 
-**PayID:** [Your ABN]  
+**PayID:** +61 421804218  
 **Reference:** PROFESSIONAL-001
 
 ---
@@ -40,7 +40,7 @@ Choose your tier and secure your transaction instantly via NAB Osko.
 - Advanced analytics & reporting
 - Valid for 1 year
 
-**PayID:** [Your ABN]  
+**PayID:** +61 421804218  
 **Reference:** ENTERPRISE-001
 
 ---
@@ -49,7 +49,7 @@ Choose your tier and secure your transaction instantly via NAB Osko.
 
 1. Open your banking app (NAB)
 2. Select **Pay with PayID**
-3. Enter PayID: **[Your ABN]**
+3. Enter PayID: **+61 421804218**
 4. Enter amount for your chosen tier
 5. Reference line: Use the tier reference above
 6. Submit instantly via Osko
