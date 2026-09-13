@@ -1,1 +1,1 @@
-minongsentinel@github.io - Official Site
+minongsentinel.github.io - Official Site
