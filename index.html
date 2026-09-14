@@ -5,56 +5,333 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MINONG SENTINEL</title>
 <style>
-body{margin:0;background:#020a18;color:#f3e5ab;font-family:Georgia,serif;text-align:center}
-img{width:100%;display:block}
-.wrap{padding:40px 20px}
-h1{letter-spacing:5px;font-size:2.5em;margin:10px}
-.tagline{letter-spacing:4px;color:#8aa0c8;margin-top:20px}
-.btn{display:inline-block;margin:20px;padding:18px 40px;border:1px solid #f3e5ab;text-decoration:none;color:#020a18;background:#f3e5ab;font-weight:bold;letter-spacing:2px}
-.footer{margin-top:50px;color:#4a5a7a;font-size:0.8em;letter-spacing:2px}
-.tiers{display:flex;justify-content:center;gap:20px;margin:40px 0;flex-wrap:wrap}
-.tier{border:1px solid #8aa0c8;padding:30px;min-width:200px;background:#0a1428}
-.tier h3{color:#f3e5ab;margin-top:0}
-.tier-price{font-size:1.8em;color:#f3e5ab;font-weight:bold;margin:15px 0}
-.payid-display{background:#0a1428;border:2px solid #f3e5ab;padding:20px;border-radius:5px;margin:15px 0;font-weight:bold;letter-spacing:2px;font-size:1.1em}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #020a18 0%, #0a1428 50%, #1a2a4a 100%);
+  color: #f3e5ab;
+  font-family: Georgia, serif;
+  text-align: center;
+  overflow-x: hidden;
+  perspective: 1200px;
+  min-height: 100vh;
+}
+
+.wrap {
+  padding: 40px 20px;
+  perspective: 1200px;
+}
+
+h1 {
+  letter-spacing: 5px;
+  font-size: 3em;
+  margin: 10px;
+  text-transform: uppercase;
+  animation: float 6s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(243, 229, 171, 0.5), 0 0 60px rgba(138, 160, 200, 0.3);
+  transform-style: preserve-3d;
+  transform: translateZ(50px);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateZ(50px) translateY(0px); }
+  50% { transform: translateZ(50px) translateY(-20px); }
+}
+
+.tagline {
+  letter-spacing: 4px;
+  color: #8aa0c8;
+  margin-top: 20px;
+  font-size: 1.1em;
+  animation: slideIn 1s ease-out;
+  text-shadow: 0 0 20px rgba(138, 160, 200, 0.4);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateZ(-100px) rotateX(45deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0) rotateX(0);
+  }
+}
+
+.intro-text {
+  color: #8aa0c8;
+  max-width: 600px;
+  margin: 30px auto;
+  font-size: 0.95em;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(10, 20, 40, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(138, 160, 200, 0.3);
+  transform: translateZ(30px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 15px 35px;
+  border: 2px solid #f3e5ab;
+  text-decoration: none;
+  color: #020a18;
+  background: linear-gradient(135deg, #f3e5ab 0%, #e8d99f 100%);
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateZ(0);
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(243, 229, 171, 0.2);
+}
+
+.btn:hover {
+  transform: translateZ(20px) rotateY(5deg);
+  box-shadow: 0 20px 50px rgba(243, 229, 171, 0.4);
+  letter-spacing: 3px;
+}
+
+.btn:active {
+  transform: translateZ(5px);
+}
+
+.tiers {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+  perspective: 1200px;
+}
+
+.tier {
+  border: 2px solid #8aa0c8;
+  padding: 30px;
+  min-width: 250px;
+  max-width: 300px;
+  background: linear-gradient(135deg, rgba(10, 20, 40, 0.8) 0%, rgba(26, 42, 74, 0.6) 100%);
+  border-radius: 15px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateZ(0);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tier::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(243, 229, 171, 0.1), transparent);
+  transition: left 0.5s;
+  pointer-events: none;
+}
+
+.tier:hover::before {
+  left: 100%;
+}
+
+.tier:hover {
+  transform: translateZ(40px) rotateY(8deg) rotateX(-5deg);
+  box-shadow: 0 40px 80px rgba(138, 160, 200, 0.3);
+  border-color: #f3e5ab;
+}
+
+.tier h3 {
+  color: #f3e5ab;
+  margin-top: 0;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(243, 229, 171, 0.3);
+}
+
+.tier-price {
+  font-size: 2.2em;
+  color: #f3e5ab;
+  font-weight: bold;
+  margin: 20px 0;
+  text-shadow: 0 0 20px rgba(243, 229, 171, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(243, 229, 171, 0.3); }
+  50% { text-shadow: 0 0 30px rgba(243, 229, 171, 0.7); }
+}
+
+.tier p {
+  font-size: 0.9em;
+  color: #b8c8d8;
+  margin: 15px 0;
+}
+
+#pay {
+  margin-top: 80px;
+  border-top: 2px solid #1a2a4a;
+  padding-top: 40px;
+  transform: translateZ(20px);
+}
+
+#pay h3 {
+  font-size: 1.8em;
+  text-shadow: 0 0 20px rgba(243, 229, 171, 0.3);
+  letter-spacing: 3px;
+}
+
+.payid-display {
+  background: linear-gradient(135deg, rgba(10, 20, 40, 0.9) 0%, rgba(26, 42, 74, 0.7) 100%);
+  border: 2px solid #f3e5ab;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  color: #f3e5ab;
+  box-shadow: 0 15px 40px rgba(243, 229, 171, 0.2), inset 0 0 20px rgba(243, 229, 171, 0.1);
+  transform: translateZ(30px);
+  word-break: break-all;
+  animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 15px 40px rgba(243, 229, 171, 0.2), inset 0 0 20px rgba(243, 229, 171, 0.1); }
+  50% { box-shadow: 0 20px 50px rgba(243, 229, 171, 0.35), inset 0 0 30px rgba(243, 229, 171, 0.15); }
+}
+
+.payment-guide {
+  background: linear-gradient(135deg, rgba(10, 20, 40, 0.8) 0%, rgba(26, 42, 74, 0.6) 100%);
+  border: 2px solid #8aa0c8;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 700px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transform: translateZ(20px);
+}
+
+.payment-guide h3 {
+  color: #f3e5ab;
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(243, 229, 171, 0.3);
+}
+
+.payment-guide ol {
+  text-align: left;
+  color: #b8c8d8;
+  display: inline-block;
+}
+
+.payment-guide li {
+  margin: 15px 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.payment-guide li strong {
+  color: #f3e5ab;
+}
+
+.footer {
+  margin-top: 60px;
+  color: #4a5a7a;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  padding-top: 20px;
+  border-top: 1px solid #1a2a4a;
+  transform: translateZ(10px);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  
+  .tiers {
+    gap: 15px;
+  }
+  
+  .tier {
+    min-width: 200px;
+    padding: 20px;
+  }
+  
+  .tagline {
+    font-size: 0.9em;
+  }
+  
+  .btn {
+    font-size: 0.9em;
+    padding: 12px 25px;
+  }
+}
+
 </style>
 </head>
 <body>
 <div class="wrap">
 <h1>MINONG SENTINEL</h1>
 <div class="tagline">WILLED INTO EXISTENCE — LIMITLESS AT LIGHT SPEED</div>
-<p style="color:#8aa0c8;max-width:600px;margin:30px auto">Official Australian store. CEO MITCH ELLIS. Secure NAB Business Osko payments.</p>
+<p class="intro-text">Official Australian store. CEO MITCH ELLIS. Secure NAB Business Osko payments.</p>
 
 <div class="tiers">
 <div class="tier">
 <h3>STANDARD</h3>
 <div class="tier-price">$99</div>
-<p style="font-size:0.9em">Forensics audit token<br>30 days access</p>
-<a class="btn" href="PAYMENT_GUIDE.md">SELECT</a>
+<p>Forensics audit token<br>30 days access</p>
+<a class="btn" href="#payment">SELECT</a>
 </div>
 <div class="tier">
 <h3>PROFESSIONAL</h3>
 <div class="tier-price">$299</div>
-<p style="font-size:0.9em">Advanced suite<br>90 days access</p>
-<a class="btn" href="PAYMENT_GUIDE.md">SELECT</a>
+<p>Advanced suite<br>90 days access</p>
+<a class="btn" href="#payment">SELECT</a>
 </div>
 <div class="tier">
 <h3>ENTERPRISE</h3>
 <div class="tier-price">$999</div>
-<p style="font-size:0.9em">Full enterprise suite<br>1 year access</p>
-<a class="btn" href="PAYMENT_GUIDE.md">SELECT</a>
+<p>Full enterprise suite<br>1 year access</p>
+<a class="btn" href="#payment">SELECT</a>
 </div>
 </div>
 
-<div id="pay" style="margin-top:60px;border-top:1px solid #1a2a4a;padding-top:30px">
-<h3>SECURE PAYMENT</h3>
-<p style="color:#8aa0c8">NAB Business Osko Transfer</p>
+<div id="payment" class="payment-guide">
+<h3>SECURE PAYMENT GUIDE</h3>
+<ol>
+<li><strong>Payment Method:</strong> NAB Business Osko Transfer</li>
+<li><strong>PayID:</strong> +61 421804218</li>
+<li><strong>Step 1:</strong> Select your tier above (Standard, Professional, or Enterprise)</li>
+<li><strong>Step 2:</strong> Make payment using NAB Business Osko</li>
+<li><strong>Step 3:</strong> In payment notes, include your order reference or tier name</li>
+<li><strong>Step 4:</strong> Your access token will be delivered within 24 hours</li>
+<li><strong>Note:</strong> Keep your transaction reference for support inquiries</li>
+</ol>
+</div>
+
+<div id="pay" style="margin-top: 40px;">
+<h3>PAYMENT DETAILS</h3>
+<p style="color:#8aa0c8">Transfer your payment to:</p>
 <div class="payid-display">PayID: +61 421804218</div>
-<p style="font-size:0.9em;color:#4a5a7a">Reference your order ID in payment notes</p>
-<a class="btn" href="PAYMENT_GUIDE.md">VIEW PAYMENT GUIDE</a>
 </div>
 
-<div class="footer">MINONGSENTINEL.GITHUB.IO — © 2026</div>
+<div class="footer">MINONGSENTINEL.COM — © 2026</div>
 </div>
 </body>
 </html>
