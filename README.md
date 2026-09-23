@@ -1,1 +1,1 @@
-minongsentinel.github.io 
+minongsentinel777.quest 
