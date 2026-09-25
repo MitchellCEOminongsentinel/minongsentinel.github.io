@@ -1,4 +1,4 @@
-900;color:#d4af37">$79 <span style="font-size:16px">AUD</span></div>
+ 900;color:#d4af37">$79 <span style="font-size:16px">AUD</span></div>
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=PAYID%3A61421804218%20BSB%3A083-945%20ACC%3A772653909%20AMT%3A79" alt="QR $79" style="background:#fff;padding:10px;border-radius:12px;margin:16px 0">
 <div style="font-size:13px;line-height:1.8">
 <b class="gold">PAY ID:</b> +61 421 804 218<br>
