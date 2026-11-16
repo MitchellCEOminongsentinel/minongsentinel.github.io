@@ -54,11 +54,13 @@ Choose your tier and secure your transaction instantly via NAB Osko.
 5. Reference line: Use the tier reference above
 6. Submit instantly via Osko
 
-**Confirmation email sent within 5 minutes.**
+Keep your bank's payment receipt as proof of purchase.
 
 ---
 
 ## ❓ Questions?
-Contact: support@minongsentinel.github.io
+Contact details will be published before launch. Until then, keep your transaction reference for any inquiry.
+
+*Pending store owner action: ABN and GST statement to be added to this guide and the store page before sales begin.*
 
 © 2026 MINONG SENTINEL

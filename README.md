@@ -1,118 +1,37 @@
-  900;color:#d4af37">$79 <span style="font-size:16px">AUD</span></div>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=PAYID%3A61421804218%20BSB%3A083-945%20ACC%3A772653909%20AMT%3A79" alt="QR $79" style="background:#fff;padding:10px;border-radius:12px;margin:16px 0">
-<div style="font-size:13px;line-height:1.8">
-<b class="gold">PAY ID:</b> +61 421 804 218<br>
-<b class="gold">NAB BSB:</b> 083-945<br>
-<b class="gold">NAB Account:</b> 77-265-3909<br>
-<b class="gold">Domain:</b> minongsentinel777.quest
-</div>
-<a class="btn" href="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=PAYID%3A61421804218%20BSB%3A083-945%20ACC%3A772653909%20AMT%3A79" target="_blank">Pay $79 - Tap to Apply Instantly via NAB Osko</a>
-</div>
+# Minong Sentinel — Customer Store
 
-</div>
+Public sales site for Minong Sentinel. This repository publishes the store page (`index.html`) and the payment guide (`PAYMENT_GUIDE.md`).
 
-<div style="margin-top:80px;padding:24px;border:1px solid rgba(212,175,55,.3);border-radius:12px;background:rgba(255,255,255,.03);max-width:700px;margin-left:auto;margin-right:auto">
-<p style="font-size:13px;line-height:1.9">
-<span class="gold">Secure Payment Method:</span> NAB Osko via PAY ID +61 421 804 218<br>
-<span class="gold">BSB:</span> 083-945 | <span class="gold">Account:</span> 77-265-3909<br>
-<span class="gold">Domain:</span> minongsentinel777.quest<br>
-Instant confirmation • Encrypted • 24/7 • No name advertised
-</p>
-</div>
+## Approved price schedule
 
-</div>
+There is one approved schedule. It is the schedule published on the store page, in the payment guide, and in the deploy-branch payment interface:
 
-<footer style="text-align:center;padding:40px;color:#5a6a8a;font-size:12px">
-© 2026 minongsentinel777.quest • All payments via NAB Osko • Terms apply
-</footer>
+| Tier | Price (AUD) | Access | Reference |
+|------|-------------|--------|-----------|
+| STANDARD | $99 | 30 days | STANDARD-001 |
+| PROFESSIONAL | $299 | 90 days | PROFESSIONAL-001 |
+| ENTERPRISE | $999 | 1 year | ENTERPRISE-001 |
 
-</body>
-</html>
-*This file:*
-- Has your 3D floating pyramid in space look
-- Shows ONLY PAY ID +61 421 804 218, BSB 083-945, Account 77-265-3909, Domain http://minongsentinel777.quest
-- NO name, NO email
-- QR on every level — real scannable to your NAB
+## Payment method
 
-Upload that file now and your site is live. Let me know once you've committed and I'll verify it's showing correctly on http://minongsentinel777.quest.
-d>
-<body>
+Payments are received by NAB Business Osko transfer to the store PayID. Full customer instructions are in [PAYMENT_GUIDE.md](PAYMENT_GUIDE.md).
 
-<div class="hero">
-<h1 class="gold" style="font-size:52px;letter-spacing:4px">MINONG SENTINEL 777</h1>
-<h2 style="font-size:28px;margin-top:0">PRICING & PAYMENT PYRAMID IN ORBIT</h2>
-<p style="color:#8da0c3;max-width:700px;margin:20px auto">Secure • Encrypted • Instant NAB Osko • Floating Above Earth • minongsentinel777.quest</p>
-</div>
+Bank account details (BSB/account number) are deliberately **not** stored in this repository. Customers use the PayID only.
 
-<div style="text-align:center;padding:60px 20px">
-<div class="pyramid" style="max-width:900px;margin:auto;display:flex;flex-direction:column;gap:32px;align-items:center">
+## Security notes
 
-<!-- LEVEL 3 TOP - CEO -->
-<div class="card" style="width:340px;transform:translateZ(100px)">
-<h3 class="gold">LEVEL 3 • MINONG CEO</h3>
-<div style="font-size:48px;font-weight:900;color:#d4af37">$1499 <span style="font-size:16px">AUD</span></div>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=PAYID%3A61421804218%20BSB%3A083-945%20ACC%3A772653909%20AMT%3A1499" alt="QR $1499" style="background:#fff;padding:10px;border-radius:12px;margin:16px 0">
-<div style="font-size:13px;line-height:1.8">
-<b class="gold">PAY ID:</b> +61 421 804 218<br>
-<b class="gold">NAB BSB:</b> 083-945<br>
-<b class="gold">NAB Account:</b> 77-265-3909<br>
-<b class="gold">Domain:</b> minongsentinel777.quest
-</div>
-<a class="btn" href="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=PAYID%3A61421804218%20BSB%3A083-945%20ACC%3A772653909%20AMT%3A1499" target="_blank">Pay $1499 - Tap to Apply Instantly via NAB Osko</a>
-</div>
+- Do not add bank account details, BSB numbers, or account numbers to any file in this repository.
+- Do not generate QR codes through third-party services (for example `api.qrserver.com`) — payment details embedded in external URLs are exposed to that service. QR images must be self-hosted and generated offline.
+- This README previously contained a draft payment page with an exposed BSB and account number, third-party QR URLs, and an unapproved price schedule. It was removed on 2026-11-17 as part of the payment records audit. The old content remains visible in the repository's git history; treat that account number as public.
 
-<!-- LEVEL 2 MIDDLE - MOST POPULAR -->
-<div class="card" style="width:520px;border-width:2px;box-shadow:0 0 50px rgba(212,175,55,.8)">
-<div style="background:#d4af37;color:#000;padding:6px 18px;border-radius:20px;display:inline-block;font-size:12px;font-weight:900;margin-bottom:10px">MOST POPULAR • ORBIT STABLE</div>
-<h3 class="gold">LEVEL 2 • OPERATOR</h3>
-<div style="font-size:52px;font-weight:900;color:#d4af37">$799 <span style="font-size:16px">AUD</span></div>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=PAYID%3A61421804218%20BSB%3A083-945%20ACC%3A772653909%20AMT%3A799" alt="QR $799" style="background:#fff;padding:10px;border-radius:12px;margin:16px 0">
-<div style="font-size:13px;line-height:1.8">
-<b class="gold">PAY ID:</b> +61 421 804 218<br>
-<b class="gold">NAB BSB:</b> 083-945<br>
-<b class="gold">NAB Account:</b> 77-265-3909<br>
-<b class="gold">Domain:</b> minongsentinel777.quest
-</div>
-<a class="btn" href="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=PAYID%3A61421804218%20BSB%3A083-945%20ACC%3A772653909%20AMT%3A799" target="_blank">Pay $799 - Tap to Apply Instantly via NAB Osko</a>
-</div>
+## Deployment
 
-<!-- LEVEL 1 BOTTOM - SCOUT -->
-<div class="card" style="width:680px;max-width:90vw">
-<h3 class="gold">LEVEL 1 • SCOUT</h3>
-<div style="font-size:52px;font-weight:900;color:#d4af37">$79 <span style="font-size:16px">AUD</span></div>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=PAYID%3A61421804218%20BSB%3A083-945%20ACC%3A772653909%20AMT%3A79" alt="QR $79" style="background:#fff;padding:10px;border-radius:12px;margin:16px 0">
-<div style="font-size:13px;line-height:1.8">
-<b class="gold">PAY ID:</b> +61 421 804 218<br>
-<b class="gold">NAB BSB:</b> 083-945<br>
-<b class="gold">NAB Account:</b> 77-265-3909<br>
-<b class="gold">Domain:</b> minongsentinel777.quest
-</div>
-<a class="btn" href="https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=PAYID%3A61421804218%20BSB%3A083-945%20ACC%3A772653909%20AMT%3A79" target="_blank">Pay $79 - Tap to Apply Instantly via NAB Osko</a>
-</div>
+`netlify.toml` publishes the repository root. The deploy branch `deploy/minongsentinel777-quest` contains the QR payment interface, whose payment assets must be configured with verified, self-hosted QR images before launch.
 
-</div>
+## Pending compliance items
 
-<div style="margin-top:80px;padding:24px;border:1px solid rgba(212,175,55,.3);border-radius:12px;background:rgba(255,255,255,.03);max-width:700px;margin-left:auto;margin-right:auto">
-<p style="font-size:13px;line-height:1.9">
-<span class="gold">Secure Payment Method:</span> NAB Osko via PAY ID +61 421 804 218<br>
-<span class="gold">BSB:</span> 083-945 | <span class="gold">Account:</span> 77-265-3909<br>
-<span class="gold">Domain:</span> minongsentinel777.quest<br>
-Instant confirmation • Encrypted • 24/7 • No name advertised
-</p>
-</div>
+These cannot be completed without details only the store owner can provide:
 
-</div>
-
-<footer style="text-align:center;padding:40px;color:#5a6a8a;font-size:12px">
-© 2026 minongsentinel777.quest • All payments via NAB Osko • Terms apply
-</footer>
-
-</body>
-</html>
-*This file:*
-- Has your 3D floating pyramid in space look
-- Shows ONLY PAY ID +61 421 804 218, BSB 083-945, Account 77-265-3909, Domain http://minongsentinel777.quest
-- NO name, NO email
-- QR on every level — real scannable to your NAB
-
-Upload that file now and your site is live. Let me know once you've committed and I'll verify it's showing correctly on http://minongsentinel777.quest.
+- ABN to be displayed on the store page and invoices.
+- GST registration status and the corresponding GST statement on the store page.
+- Terms of sale and refund policy.
