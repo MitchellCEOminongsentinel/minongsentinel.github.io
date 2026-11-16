@@ -28,10 +28,15 @@ Bank account details (BSB/account number) are deliberately **not** stored in thi
 
 `netlify.toml` publishes the repository root. The deploy branch `deploy/minongsentinel777-quest` contains the QR payment interface, whose payment assets must be configured with verified, self-hosted QR images before launch.
 
+## Tax position
+
+As stated by the store owner: Minong Sentinel is **not registered for GST** and no GST is charged while turnover is below the $75,000 GST registration threshold. Registration becomes compulsory within 21 days of the threshold being reached (actual or projected), at which point prices become GST-inclusive and tax invoices are issued on request.
+
 ## Pending compliance items
 
-These cannot be completed without details only the store owner can provide:
-
-- ABN to be displayed on the store page and invoices.
-- GST registration status and the corresponding GST statement on the store page.
+- ABN to be displayed on the store page and invoices. The ABN is separate from the GST threshold: business customers who are not given the supplier's ABN must withhold the top rate of tax from payments.
 - Terms of sale and refund policy.
+
+## Threshold tracking
+
+The $75,000 GST threshold counts combined turnover from all enterprises operated as a sole trader. At the approved prices, the threshold is reached at roughly 758 Standard sales, 251 Professional sales, or 76 Enterprise sales in any 12-month period (or a mix). Track monthly.
