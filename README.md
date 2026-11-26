@@ -1,42 +1,53 @@
-# Minong Sentinel — Customer Store
-
-Public sales site for Minong Sentinel. This repository publishes the store page (`index.html`) and the payment guide (`PAYMENT_GUIDE.md`).
-
-## Approved price schedule
-
-There is one approved schedule. It is the schedule published on the store page, in the payment guide, and in the deploy-branch payment interface:
-
-| Tier | Price (AUD) | Access | Reference |
-|------|-------------|--------|-----------|
-| STANDARD | $99 | 30 days | STANDARD-001 |
-| PROFESSIONAL | $299 | 90 days | PROFESSIONAL-001 |
-| ENTERPRISE | $999 | 1 year | ENTERPRISE-001 |
-
-## Payment method
-
-Payments are received by NAB Business Osko transfer to the store PayID. Full customer instructions are in [PAYMENT_GUIDE.md](PAYMENT_GUIDE.md).
-
-Bank account details (BSB/account number) are deliberately **not** stored in this repository. Customers use the PayID only.
-
-## Security notes
-
-- Do not add bank account details, BSB numbers, or account numbers to any file in this repository.
-- Do not generate QR codes through third-party services (for example `api.qrserver.com`) — payment details embedded in external URLs are exposed to that service. QR images must be self-hosted and generated offline.
-- This README previously contained a draft payment page with an exposed BSB and account number, third-party QR URLs, and an unapproved price schedule. It was removed on 2026-11-17 as part of the payment records audit. The old content remains visible in the repository's git history; treat that account number as public.
-
-## Deployment
-
-`netlify.toml` publishes the repository root. The deploy branch `deploy/minongsentinel777-quest` contains the QR payment interface, whose payment assets must be configured with verified, self-hosted QR images before launch.
-
-## Tax position
-
-As stated by the store owner: Minong Sentinel is **not registered for GST** and no GST is charged while turnover is below the $75,000 GST registration threshold. Registration becomes compulsory within 21 days of the threshold being reached (actual or projected), at which point prices become GST-inclusive and tax invoices are issued on request.
-
-## Pending compliance items
-
-- ABN to be displayed on the store page and invoices. The ABN is separate from the GST threshold: business customers who are not given the supplier's ABN must withhold the top rate of tax from payments.
-- Terms of sale and refund policy.
-
-## Threshold tracking
-
-The $75,000 GST threshold counts combined turnover from all enterprises operated as a sole trader. At the approved prices, the threshold is reached at roughly 758 Standard sales, 251 Professional sales, or 76 Enterprise sales in any 12-month period (or a mix). Track monthly.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minong Sentinel - Minong, Wisconsin</title>
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0f1e2e;color:#fff}
+header{background:#c1272d;padding:28px 20px;text-align:center}
+header h1{margin:0;font-size:38px;letter-spacing:1px}
+header p{margin:8px 0 0;opacity:.9}
+nav{background:#fff;color:#0f1e2e;display:flex;justify-content:center;gap:20px;padding:12px;font-weight:bold}
+nav a{color:#0f1e2e;text-decoration:none}
+.hero{padding:50px 20px;text-align:center;background:linear-gradient(180deg,#1a3a5a,#0f1e2e)}
+.hero h2{font-size:32px;margin:0 0 10px}
+.hero p{max-width:600px;margin:0 auto 20px;line-height:1.6;color:#d6e2ec}
+.btn{display:inline-block;background:#c1272d;color:#fff;padding:14px 24px;border-radius:8px;text-decoration:none;font-weight:bold}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:20px;max-width:900px;margin:0 auto}
+.card{background:#fff;color:#222;border-radius:12px;padding:20px}
+.card h3{margin-top:0;color:#c1272d}
+.card p{line-height:1.6}
+footer{background:#000;padding:20px;text-align:center;color:#aaa;font-size:14px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}header h1{font-size:30px}}
+</style>
+</head>
+<body>
+<header>
+<h1>MINONG SENTINEL</h1>
+<p>Your Hometown News • Minong, Wisconsin</p>
+</header>
+<nav>
+<a href="#">Home</a>
+<a href="#">News</a>
+<a href="#">Sports</a>
+<a href="#">Events</a>
+<a href="#">Contact</a>
+</nav>
+<div class="hero">
+<h2>Welcome to Minong Sentinel</h2>
+<p>Local news, community events, school sports, weather, and stories that matter to the people of Minong and Washburn County.</p>
+<a class="btn" href="#">Read Latest News</a>
+</div>
+<div class="grid">
+<div class="card"><h3>Latest News</h3><p>Stay updated with town board news, road updates, school announcements, and local businesses in Minong.</p></div>
+<div class="card"><h3>Community Events</h3><p>Farmers markets, town festivals, church suppers, fundraisers, and gatherings around Washburn County.</p></div>
+<div class="card"><h3>Sports</h3><p>Scores, schedules, and highlights from Northwood School District and local youth teams.</p></div>
+<div class="card"><h3>Weather</h3><p>Minong, WI weather, lake conditions, snow reports, and outdoor updates for hunters, fishers, and families.</p></div>
+</div>
+<footer>
+<p>© 2026 Minong Sentinel • Minong, Wisconsin<br>Contact: info@minongsentinel.com</p>
+</footer>
+</body>
+</html>
